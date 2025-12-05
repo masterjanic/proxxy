@@ -27,7 +27,7 @@ const PORT = process.env.PORT || 8443;
 
 const sockets = new Map<number, WebSocket>();
 
-Bun.serve({
+export const server = Bun.serve({
   port: PORT,
   routes: {
     "/api/status": {

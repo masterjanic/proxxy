@@ -21,6 +21,7 @@
   ],
   "scripts": {
     "start": "bun src/index.ts",
+    "test": "bun test",
     "check": "biome check .",
     "check:unsafe": "biome check --write --unsafe .",
     "check:write": "biome check --write .",
