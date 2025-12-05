@@ -1,0 +1,12 @@
+services:
+  proxxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${PORT:-8443}:${PORT:-8443}
+    environment:
+      - SIGNATURE_KEY=${SIGNATURE_KEY}
+    env_file:
+      - .env
+    restart: always
