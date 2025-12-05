@@ -1,9 +1,24 @@
 {
   "name": "proxxy",
-  "module": "index.ts",
+  "module": "src/index.ts",
   "type": "module",
   "private": true,
+  "license": "Apache-2.0",
+  "author": "Janic Bellmann <contact@janic.dev> (https://janic.dev/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masterjanic/proxxy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/masterjanic/proxxy/issues",
+    "email": "contact@janic.dev"
+  },
   "scripts": {
+    "start": "bun src/index.ts",
+    "check": "biome check .",
+    "check:unsafe": "biome check --write --unsafe .",
+    "check:write": "biome check --write .",
+    "typecheck": "tsc --noEmit",
     "prepare": "husky"
   },
   "lint-staged": {
@@ -17,7 +32,8 @@
     "@commitlint/config-conventional": "^20.2.0",
     "@types/bun": "1.3.3",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.7"
+    "lint-staged": "^16.2.7",
+    "proxmox-api": "^1.1.1"
   },
   "peerDependencies": {
     "typescript": "^5"
